@@ -1,0 +1,21 @@
+import { Router } from 'express';
+import adminRoutes from './admin.routes';
+import clientRoutes from './client.routes';
+import orderRoutes from './order.routes';
+import orderProductRoutes from './orderProduct.routes';
+import eventRoutes from './event.routes';
+import userRoutes from './user.routes';
+import paymentRoutes from './payment.routes';
+
+const router = Router();
+
+// Definición de rutas base
+router.use('/admins', adminRoutes);
+router.use('/clients', clientRoutes);
+router.use('/orders', orderRoutes);
+router.use('/payments', paymentRoutes);
+router.use('/order-products', orderProductRoutes);
+router.use('/events', eventRoutes);
+router.use('/users', userRoutes);
+
+export default router;
